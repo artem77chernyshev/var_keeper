@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkoutv3
+        uses: actions/checkout@v3
       - name: Run Unit Tests
         run: 
           chmod +x ./test/unit-tests.sh
@@ -29,7 +29,7 @@ jobs:
           --health-retries 5
     steps:
       - name: Checkout
-        uses: actions/checkoutv3
+        uses: actions/checkout@v3
       - name: Install requirements
         run: pip install -r requirements.txt
       - name: Run app
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkoutv3
+        uses: actions/checkout@v3
       - name: Run Mega Hard Tests
         run: 
           chmod +x ./test/all-mega-hard-tests.sh
